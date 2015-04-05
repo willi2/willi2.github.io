@@ -11,9 +11,29 @@
         <script src="illini_sfpe_website.js"></script>
         <script type="text/javascript">
             $(document).ready( function() {
+                /*sets up vertical scroll*/
                 $('.subMenu').smint({
                     'scrollSpeed' : 1000
                 });
+
+                /*resizes the fonts when screen size changes*/
+                var holdWidth = $(window).width();
+                $(window).on('resize', function () {
+                    newPercentage = (($(window).width() / holdWidth) * 100) + "%";
+                    $("html").css("font-size", newPercentage)
+                });
+
+                $(".calendar-iframe").css("width", 600);
+                /*resizes the fonts when screen size changes*/
+                var holdWidth = $(window).width();
+                $(window).on('resize', function () {                   
+                    var newPercentage = 0;
+                    var newWidth = 0;
+                    newPercentage = ($(window).width() / holdWidth);
+                    newWidth = ((newPercentage*holdWidth) / 2) + "px";
+                    $(".calendar-iframe").css("width", newWidth)
+                });
+                
             });
         </script>
     </head>
@@ -93,7 +113,7 @@
                         <h4 class="title">calendar</h4>
                         <div class= "section"> 
                         <center>
-                            <iframe align="center" src="https://www.google.com/calendar/embed?src=illinisfpe%40gmail.com&ctz=America/Chicago" frameborder="0" scrolling="no">
+                                <iframe class="calendar-iframe" align="center" src="https://www.google.com/calendar/embed?src=illinisfpe%40gmail.com&ctz=America/Chicago" frameborder="0" scrolling="no">
                             </iframe>
                         </center>
                         </div>
