@@ -1,4 +1,3 @@
-
 html { 
     margin: 0;
     padding: 0;
@@ -6,35 +5,51 @@ html {
 }
 
 h1 { 
-    font-size: 2.4rem;
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.4rem;
 }
 
 body {
-	background-image: url("green-fibers.png");
-	margin: 0;
-	padding: 0;
-    font-size: 1.4rem;
+    background-image: url("green-fibers.png");
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
 }
 
 .sticky {
     margin: 0;
     padding: 0;
-	position: fixed;
-	width: 100%;
-	top: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 .navbar {
-	background-color: rgba(68, 68, 68, 0.7);
-	height: 60px;
+    background-color: rgba(68, 68, 68, .9);
+    height: 60px;
+}
+
+.facebook {
+    float: left;
+    overflow:hidden;
+    width:30%;
+    height:60px;
 }
 
 nav {
     margin: 30px 10px 0 0;
     position: absolute;
-    right: 170px;
-    font-size: 20px;
+    right: 10%;
+    font-size: 1.4rem;
     padding: 0;
+    border: none;
 }
 
 a:link {
@@ -58,38 +73,44 @@ a:active {
     color: silver;
 }
 
-.logo {
+.logo-wrapper {
+    position: relative;
     box-shadow: 2px 2px 2px rgb(58, 64, 64);
     border-top: solid 2px rgb(58, 64, 64);
     border-bottom: solid 2px rgb(58, 64, 64);
     padding: 0;
+    height: 80px;
     background-image: url('fireFinal01.png');
 }
 
-.logo h1 {
+.logo {
+    position: absolute;
+    left: 10%;
+}
+
+.logo-wrapper h1 {
     font-weight: 300;
 }
 
-.logo h4 {
+.logo-wrapper h4 {
     size: 30px;
-    padding-left:20%;
+    padding-left: 20%;
     padding-bottom: 5px;
     color: rgb(58, 64, 64);
     font-family: 'Comfortaa', sans-serif;
 }
 
-.logo a {
-	display: inline-block;
-}
-.logo .name_wrapper {
+.logo-wrapper .name_wrapper {
     display: inline-block;
+    margin: auto 0;
     vertical-align: top;
+
 }
 
-.logo img {
-	width: 70px;
-	height: 70px;
-	padding: 5px 10px 5px 150px;
+.logo-wrapper img {
+    width: 70px;
+    height: 70px;
+    padding: 5px 10px 5px 0;
 }
 
 .box {
@@ -111,25 +132,20 @@ img {
     width: 100%;
 }
 
-.title {
-    padding-top: 30px;
-}
-
 .section-wrapper {
     box-sizing: border-box;
-    height: 600px;
     padding-bottom: 50px;
-    padding-top: 50px;
+    padding-top: 90px;
 }
 
+
 .events {
-    padding-top: 150;
-    height: 1500px;
+    padding-top: 150px;
     padding-bottom: 200px;
 }
 
 .section-wrapper.contact {
-    padding-top; 20px;
+    padding-top: 90px;
     height: 300px;
     margin-bottom: 30px;
 }
@@ -151,18 +167,19 @@ img {
 }
 
 .home {
-	position: relative;
+    position: relative;
 }
+
 .home .img_caption_wrapper {
-    position: absolute
     align: right;
     padding-left: 15px;
 }
+
 .title {
     color: rgb(231, 100, 32);
     font-family: 'Oxygen', sans-serif;
     font-weight: 100;
-    font-size: 30px;
+    /*font-size: 30px;*/
     padding-bottom: 3px;
     margin: 5px;
 }
@@ -174,14 +191,16 @@ img {
 }
 
 .about p {
-	padding-top: 30px;
+    padding-top: 30px;
 }
 
-p {
+/*p {
     font-size: 16px;
-}
+}*/
+
 .eoh {
     width: 50%;
+    float: right;
 }
 
 /*
@@ -214,9 +233,11 @@ iframe {
 }
 
 .calendar-iframe {
-    padding: 0px 0px 0px 0px;
+    padding: 0;
     height: 400px;
+    width: 90%;
     border: solid 10px rgb(58, 64, 64);
+    margin: 0 auto;
 }
 
 .officers .section {
@@ -224,7 +245,7 @@ iframe {
 }
 
 .officer {
-    padding-top: 30px;
+    padding: 0 0 0 30px;
     display: inline-block;
     margin-right: 30px;
     width: 25%;
@@ -238,8 +259,14 @@ iframe {
 .officer h4, .officer p {
     text-align: center;
     margin: 0;
+    padding-bottom: 5px;
 }
 
+.officer .email {
+    font-size: .8rem;
+    padding: 0;
+    margin: 0;
+}
 
 .bottom-image {
     margin:0;
@@ -262,4 +289,14 @@ iframe {
 }
 
 
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 60%;
+    }
+}
 
+@media screen and (max-width: 530px) {
+    html {
+        font-size: 40%;
+    }
+}
